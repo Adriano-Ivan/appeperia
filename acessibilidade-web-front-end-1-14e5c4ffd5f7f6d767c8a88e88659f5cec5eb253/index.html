@@ -26,7 +26,7 @@
 
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      content="width=device-width"
     />
   </head>
   <body>
@@ -424,29 +424,28 @@
             </p>
 
             <div class="contatoCampo contatoCampo--sucesso">
-              <label>Nome: </label>
+              <label for="nome">Nome: </label>
               <input
                 type="text"
-                class="contatoCampo--validouFoi"
-                value="Natan Souza"
+                class="contatoCampo--validouFoi" id="nome" placeholder="Digite seu nome"
                 required
               />
             </div>
 
             <div class="contatoCampo contatoCampo--erro">
-              <label>Email: </label>
-              <input type="email" class="contatoCampo--validouErro" required />
+              <label for="email">Email: </label>
+              <input type="email" id="email" placeholder="Email" class="contatoCampo--validouErro" required />
               <span class="contatoCampo-msg contatoCampo-msg--erro">
                 Você quis dizer <a href="#">gmail.com?</a>
               </span>
             </div>
 
             <div class="contatoCampo contatoCampo--erro">
-              <label>Telefone: </label>
+              <label for="telefone">Telefone: </label>
               <input
                 type="text"
                 class="contatoCampo--validouErro"
-                placeholder="(11) 5571-2751"
+                placeholder="(11) 5571-2751" id="telefone"
               />
               <span class="contatoCampo-msg contatoCampo-msg--erro"
                 >Faltou o DDD</span
@@ -468,7 +467,7 @@
               <input
                 type="text"
                 class="contatoCampo-campoDesabilitado"
-                disabled
+                disabled readonly
                 value="Rua Vergueiro"
               />
             </div>
@@ -478,7 +477,7 @@
               <input
                 type="text"
                 class="contatoCampo-campoDesabilitado"
-                disabled
+                disabled readonly
                 value="Vila Mariana"
               />
             </div>
@@ -488,7 +487,7 @@
               <input
                 type="text"
                 class="contatoCampo-campoDesabilitado"
-                disabled
+                disabled readonly
                 value="São Paulo"
               />
             </div>
@@ -499,7 +498,7 @@
                 type="text"
                 class="contatoCampo-campoDesabilitado"
                 disabled
-                value="SP"
+                value="SP" readonly
               />
             </div>
 
@@ -556,8 +555,9 @@
 
           <video
             src="img/formacao-java.mp4"
-            class="secaoInstitucional-video"
-          ></video>
+            class="secaoInstitucional-video" controls
+          ><track src="img/legenda-portugues-brasil.vtt" kind="subtitles" label="Português (Brasil)" srclang="pt-br">
+        </video>
         </div>
       </section>
       <!--fim .secaoInstitucional-->
